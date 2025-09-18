@@ -3,28 +3,15 @@ import { ArrowRight, Play } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <>
-    <section className="relative min-h-screen flex items-center bg-black overflow-hidden py-24 lg:py-32">
+    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-gray-50 to-white overflow-hidden py-24 lg:py-32">
       {/* Background Pattern */}
       <div className="absolute inset-0 -z-10">
-        {/* Animated background elements */}
-        <div className="absolute top-20 right-20 w-96 h-96 bg-green-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-green-400/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
-
-        {/* Trading chart visualization (subtle) */}
-        <div className="absolute right-10 top-1/2 transform -translate-y-1/2 opacity-10">
-          <div className="flex items-end space-x-2 h-64">
-            <div className="w-8 bg-green-500 h-32 rounded-t"></div>
-            <div className="w-8 bg-green-400 h-48 rounded-t"></div>
-            <div className="w-8 bg-green-500 h-40 rounded-t"></div>
-            <div className="w-8 bg-green-600 h-56 rounded-t"></div>
-            <div className="w-8 bg-green-400 h-44 rounded-t"></div>
-            <div className="w-8 bg-green-500 h-52 rounded-t"></div>
-          </div>
-        </div>
+        {/* Subtle animated background elements */}
+        <div className="absolute top-20 right-20 w-96 h-96 bg-green-500/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-green-400/3 rounded-full blur-3xl animate-pulse delay-1000"></div>
 
         {/* Grid pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(34,197,94,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(34,197,94,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(34,197,94,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(34,197,94,0.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
@@ -32,16 +19,16 @@ const HeroSection = () => {
           {/* Left Content */}
           <div className="text-left max-w-xl">
             {/* Main Headline */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight">
               Master the Markets with{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-amber-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-500">
                 Professional
               </span>{" "}
               Trading Education
             </h1>
 
             {/* Subheadline */}
-            <p className="text-xl md:text-2xl text-gray-400 mb-12 leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-600 mb-12 leading-relaxed">
               Join our elite trading academy and gain the skills, strategies,
               and mindset needed to succeed in today's volatile financial
               markets.
@@ -51,7 +38,7 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-6">
               <a
                 href="/courses"
-                className="group bg-green-500 hover:bg-green-400 text-black px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-green-500/25 transform hover:scale-105 flex items-center space-x-3"
+                className="group bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-green-600/25 transform hover:scale-105 flex items-center space-x-3"
               >
                 <span>Explore Courses</span>
                 <ArrowRight
@@ -64,7 +51,7 @@ const HeroSection = () => {
                 href="https://wa.me/919373228941"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-black px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center space-x-3 animate-pulse"
+                className="group border-2 border-green-600 text-green-700 hover:bg-green-600 hover:text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center space-x-3"
               >
                 <span>💬</span>
                 <span>Chat with Us - WhatsApp</span>
@@ -76,16 +63,16 @@ const HeroSection = () => {
           <div className="relative hidden lg:block">
             <div className="relative">
               {/* Main chart container */}
-              <div className="bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20">
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-200 shadow-xl">
                 {/* Chart header */}
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center space-x-4">
                     <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                    <span className="text-green-400 font-semibold">
+                    <span className="text-green-700 font-semibold">
                       Live Market Data
                     </span>
                   </div>
-                  <div className="text-green-400 font-mono text-lg">+24.7%</div>
+                  <div className="text-green-600 font-mono text-lg">+24.7%</div>
                 </div>
 
                 {/* Chart bars */}
@@ -106,22 +93,22 @@ const HeroSection = () => {
                 {/* Success metrics */}
                 <div className="grid grid-cols-3 gap-4 text-center">
                   <div>
-                    <div className="text-2xl font-bold text-white">95%</div>
-                    <div className="text-green-400 text-sm">Success Rate</div>
+                    <div className="text-2xl font-bold text-gray-900">95%</div>
+                    <div className="text-green-600 text-sm">Success Rate</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-white">500+</div>
-                    <div className="text-green-400 text-sm">Students</div>
+                    <div className="text-2xl font-bold text-gray-900">500+</div>
+                    <div className="text-green-600 text-sm">Students</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-white">₹2.5L</div>
-                    <div className="text-green-400 text-sm">Avg Monthly</div>
+                    <div className="text-2xl font-bold text-gray-900">₹2.5L</div>
+                    <div className="text-green-600 text-sm">Avg Monthly</div>
                   </div>
                 </div>
               </div>
 
               {/* Floating elements */}
-              <div className="absolute -top-6 -right-6 bg-green-500 text-black px-4 py-2 rounded-lg font-bold text-sm animate-bounce shadow-lg">
+              <div className="absolute -top-6 -right-6 bg-green-500 text-white px-4 py-2 rounded-lg font-bold text-sm animate-bounce shadow-lg">
                 Learn. Trade. Succeed.
               </div>
             </div>
@@ -130,36 +117,23 @@ const HeroSection = () => {
 
         {/* Bottom stats section */}
         <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div>
-            <div className="text-3xl font-bold text-green-400 mb-2">
+          <div className="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-gray-200">
+            <div className="text-3xl font-bold text-green-600 mb-2">
               6 Months
             </div>
-            <div className="text-gray-400">Comprehensive Program</div>
+            <div className="text-gray-600">Comprehensive Program</div>
           </div>
-          <div>
-            <div className="text-3xl font-bold text-green-400 mb-2">1-on-1</div>
-            <div className="text-gray-400">Expert Mentorship</div>
+          <div className="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-gray-200">
+            <div className="text-3xl font-bold text-green-600 mb-2">1-on-1</div>
+            <div className="text-gray-600">Expert Mentorship</div>
           </div>
-          <div>
-            <div className="text-3xl font-bold text-green-400 mb-2">Elite</div>
-            <div className="text-gray-400">Small Batches</div>
+          <div className="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-gray-200">
+            <div className="text-3xl font-bold text-green-600 mb-2">Elite</div>
+            <div className="text-gray-600">Small Batches</div>
           </div>
         </div>
       </div>
     </section>
-
-    {/* Section Separator */}
-    <div className="relative">
-      <div className="absolute inset-0 flex items-center">
-        <div className="w-full border-t border-green-500/20"></div>
-      </div>
-      <div className="relative flex justify-center">
-        <div className="bg-black px-6">
-          <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-        </div>
-      </div>
-    </div>
-    </>
   );
 };
 

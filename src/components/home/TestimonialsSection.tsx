@@ -71,17 +71,16 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <>
-    <section className="py-24 bg-gradient-to-b from-black to-gray-900">
+    <section className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             What Our{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-500">
               Learners Say
             </span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Real success stories from our students across video testimonials,
             Google reviews, and social media
           </p>
@@ -89,14 +88,14 @@ const TestimonialsSection = () => {
 
         {/* Video Testimonials */}
         <div className="mb-20">
-          <h3 className="text-2xl font-bold text-white mb-8 text-center">
+          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
             Hear from Our Students
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {videoTestimonials.map((video, index) => (
               <div
                 key={index}
-                className="group relative bg-gray-900/50 backdrop-blur-sm rounded-xl overflow-hidden border border-green-500/20 hover:border-green-400/50 transition-all duration-300 cursor-pointer hover:transform hover:-translate-y-1"
+                className="group relative bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-green-300 transition-all duration-300 cursor-pointer hover:transform hover:-translate-y-1 shadow-sm hover:shadow-lg"
               >
                 <div className="relative">
                   <img
@@ -114,10 +113,10 @@ const TestimonialsSection = () => {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h4 className="text-white font-semibold mb-2">
+                  <h4 className="text-gray-900 font-semibold mb-2">
                     {video.title}
                   </h4>
-                  <p className="text-gray-400 text-sm">by {video.student}</p>
+                  <p className="text-gray-600 text-sm">by {video.student}</p>
                 </div>
               </div>
             ))}
@@ -127,7 +126,7 @@ const TestimonialsSection = () => {
         {/* Google Reviews */}
         <div className="mb-20">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-white mb-4">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Google Reviews
             </h3>
             <div className="flex items-center justify-center space-x-2">
@@ -135,13 +134,13 @@ const TestimonialsSection = () => {
                 {[...Array(5)].map((_, i) => (
                   <Star
                     key={i}
-                    className="text-green-400 fill-current"
+                    className="text-green-500 fill-current"
                     size={20}
                   />
                 ))}
               </div>
-              <span className="text-xl font-bold text-white">4.9/5</span>
-              <span className="text-gray-400">(127 reviews)</span>
+              <span className="text-xl font-bold text-gray-900">4.9/5</span>
+              <span className="text-gray-600">(127 reviews)</span>
             </div>
           </div>
 
@@ -149,24 +148,24 @@ const TestimonialsSection = () => {
             {googleReviews.map((review, index) => (
               <div
                 key={index}
-                className="bg-gray-900/50 backdrop-blur-sm rounded-xl p-6 border border-green-500/20 hover:border-green-400/50 transition-all duration-300"
+                className="bg-white rounded-xl p-6 border border-gray-200 hover:border-green-300 transition-all duration-300 shadow-sm hover:shadow-md"
               >
                 <div className="flex items-center justify-between mb-4">
-                  <h4 className="text-white font-semibold">{review.name}</h4>
+                  <h4 className="text-gray-900 font-semibold">{review.name}</h4>
                   <div className="flex space-x-1">
                     {[...Array(review.rating)].map((_, i) => (
                       <Star
                         key={i}
-                        className="text-green-400 fill-current"
+                        className="text-green-500 fill-current"
                         size={14}
                       />
                     ))}
                   </div>
                 </div>
-                <p className="text-gray-300 leading-relaxed mb-3 text-sm">
+                <p className="text-gray-700 leading-relaxed mb-3 text-sm">
                   "{review.review}"
                 </p>
-                <p className="text-gray-400 text-xs">{review.date}</p>
+                <p className="text-gray-500 text-xs">{review.date}</p>
               </div>
             ))}
           </div>
@@ -174,24 +173,24 @@ const TestimonialsSection = () => {
 
         {/* Instagram Comments */}
         <div className="mb-12">
-          <h3 className="text-2xl font-bold text-white mb-8 text-center">
+          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
             Instagram Comments
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {instagramComments.map((comment, index) => (
               <div
                 key={index}
-                className="bg-gray-900/50 backdrop-blur-sm rounded-xl p-6 border border-green-500/20 hover:border-green-400/50 transition-all duration-300"
+                className="bg-white rounded-xl p-6 border border-gray-200 hover:border-green-300 transition-all duration-300 shadow-sm hover:shadow-md"
               >
                 <div className="flex items-center justify-between mb-3">
-                  <h4 className="text-green-400 font-semibold text-sm">
+                  <h4 className="text-green-600 font-semibold text-sm">
                     {comment.username}
                   </h4>
-                  <span className="text-gray-400 text-xs">
+                  <span className="text-gray-500 text-xs">
                     ❤️ {comment.likes}
                   </span>
                 </div>
-                <p className="text-gray-300 leading-relaxed text-sm">
+                <p className="text-gray-700 leading-relaxed text-sm">
                   {comment.comment}
                 </p>
               </div>
@@ -202,7 +201,7 @@ const TestimonialsSection = () => {
         <div className="text-center">
           <a
             href="/testimonials"
-            className="inline-flex items-center space-x-2 bg-green-500 hover:bg-green-400 text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-green-500/25 transform hover:scale-105"
+            className="inline-flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-green-600/25 transform hover:scale-105"
           >
             <span>View All Testimonials</span>
             <ArrowRight size={20} />
@@ -210,19 +209,6 @@ const TestimonialsSection = () => {
         </div>
       </div>
     </section>
-
-    {/* Section Separator */}
-    <div className="relative">
-      <div className="absolute inset-0 flex items-center">
-        <div className="w-full border-t border-green-500/20"></div>
-      </div>
-      <div className="relative flex justify-center">
-        <div className="bg-black px-6">
-          <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-        </div>
-      </div>
-    </div>
-    </>
   );
 };
 

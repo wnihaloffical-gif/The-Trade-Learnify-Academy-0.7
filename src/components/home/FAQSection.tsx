@@ -52,17 +52,16 @@ const FAQSection = () => {
   };
 
   return (
-    <>
-    <section className="py-24 bg-gradient-to-b from-gray-900 to-black">
+    <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Frequently Asked{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-500">
               Questions
             </span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Get answers to the most common questions about our trading education program
           </p>
         </div>
@@ -72,28 +71,28 @@ const FAQSection = () => {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="bg-gray-900/50 backdrop-blur-sm rounded-xl border border-green-500/20 hover:border-green-400/50 transition-all duration-300"
+                className="bg-white border border-gray-200 rounded-xl hover:border-green-300 transition-all duration-300 shadow-sm hover:shadow-md"
               >
                 <button
                   onClick={() => toggleQuestion(index)}
                   className="w-full px-8 py-6 text-left flex items-center justify-between focus:outline-none group"
                 >
-                  <h3 className="text-lg font-semibold text-white group-hover:text-green-400 transition-colors duration-300">
+                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-green-600 transition-colors duration-300">
                     {faq.question}
                   </h3>
                   <div className="flex-shrink-0 ml-4">
                     {openQuestion === index ? (
-                      <ChevronUp className="text-green-400" size={24} />
+                      <ChevronUp className="text-green-600" size={24} />
                     ) : (
-                      <ChevronDown className="text-gray-400 group-hover:text-green-400 transition-colors duration-300" size={24} />
+                      <ChevronDown className="text-gray-500 group-hover:text-green-600 transition-colors duration-300" size={24} />
                     )}
                   </div>
                 </button>
 
                 {openQuestion === index && (
                   <div className="px-8 pb-6">
-                    <div className="border-t border-green-500/20 pt-6">
-                      <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                    <div className="border-t border-gray-200 pt-6">
+                      <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
                     </div>
                   </div>
                 )}
@@ -104,7 +103,7 @@ const FAQSection = () => {
           <div className="text-center mt-12">
             <a
               href="/faq"
-              className="inline-flex items-center space-x-2 text-green-400 hover:text-green-300 font-semibold text-lg transition-colors duration-300"
+              className="inline-flex items-center space-x-2 text-green-600 hover:text-green-700 font-semibold text-lg transition-colors duration-300"
             >
               <span>View All FAQs</span>
               <ArrowRight size={20} />
@@ -113,19 +112,6 @@ const FAQSection = () => {
         </div>
       </div>
     </section>
-
-    {/* Section Separator */}
-    <div className="relative">
-      <div className="absolute inset-0 flex items-center">
-        <div className="w-full border-t border-green-500/20"></div>
-      </div>
-      <div className="relative flex justify-center">
-        <div className="bg-gray-900 px-6">
-          <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-        </div>
-      </div>
-    </div>
-    </>
   );
 };
 

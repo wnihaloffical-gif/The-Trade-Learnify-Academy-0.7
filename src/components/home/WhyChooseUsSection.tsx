@@ -36,17 +36,16 @@ const WhyChooseUsSection = () => {
   ];
 
   return (
-    <>
-    <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
+    <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Why{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-500">
               Choose Us
             </span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Here's why students across India choose us for their trading
             education
           </p>
@@ -60,16 +59,16 @@ const WhyChooseUsSection = () => {
               return (
                 <div
                   key={index}
-                  className="flex items-start space-x-4 bg-gray-900/50 backdrop-blur-sm rounded-xl p-6 border border-green-500/20 hover:border-green-400/50 transition-all duration-300 hover:transform hover:-translate-y-1"
+                  className="flex items-start space-x-4 bg-white rounded-xl p-6 border border-gray-200 hover:border-green-300 transition-all duration-300 hover:transform hover:-translate-y-1 shadow-sm hover:shadow-md"
                 >
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-green-500/20 to-green-600/20 rounded-xl flex items-center justify-center">
-                    <IconComponent className="text-green-400" size={24} />
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-green-100 to-green-200 rounded-xl flex items-center justify-center">
+                    <IconComponent className="text-green-600" size={24} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-2">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
                       {feature.title}
                     </h3>
-                    <p className="text-gray-300 leading-relaxed">
+                    <p className="text-gray-600 leading-relaxed">
                       {feature.description}
                     </p>
                   </div>
@@ -90,11 +89,11 @@ const WhyChooseUsSection = () => {
 
               {/* Overlay Content */}
               <div className="absolute bottom-8 left-6 right-6">
-                <div className="bg-black/80 backdrop-blur-sm rounded-lg p-6">
-                  <h3 className="text-white font-bold text-xl mb-3">
+                <div className="bg-white/90 backdrop-blur-sm rounded-lg p-6">
+                  <h3 className="text-gray-900 font-bold text-xl mb-3">
                     Proven Success Methods
                   </h3>
-                  <p className="text-gray-300 text-sm leading-relaxed">
+                  <p className="text-gray-700 text-sm leading-relaxed">
                     Data-driven strategies with higher win rates and
                     comprehensive risk management
                   </p>
@@ -103,24 +102,24 @@ const WhyChooseUsSection = () => {
             </div>
 
             {/* Floating Success Rate */}
-            <div className="absolute -top-4 -left-4 bg-green-500 text-black px-6 py-3 rounded-xl font-bold shadow-lg animate-pulse">
+            <div className="absolute -top-4 -left-4 bg-green-500 text-white px-6 py-3 rounded-xl font-bold shadow-lg">
               <div className="text-center">
                 <div className="text-2xl font-bold">95%</div>
                 <div className="text-xs">Success Rate</div>
               </div>
             </div>
 
-            <div className="absolute -bottom-4 -right-4 bg-gray-900/90 backdrop-blur-sm text-white px-6 py-3 rounded-xl border border-green-500/20 shadow-lg">
+            <div className="absolute -bottom-4 -right-4 bg-white/90 backdrop-blur-sm text-gray-900 px-6 py-3 rounded-xl border border-green-200 shadow-lg">
               <div className="text-center">
-                <div className="text-2xl font-bold text-green-400">1:1</div>
+                <div className="text-2xl font-bold text-green-600">1:1</div>
                 <div className="text-xs">Mentorship</div>
               </div>
             </div>
 
             {/* Additional floating element */}
-            <div className="absolute top-1/2 -left-6 transform -translate-y-1/2 bg-green-500/10 backdrop-blur-sm border border-green-500/30 text-white px-4 py-2 rounded-lg shadow-lg">
+            <div className="absolute top-1/2 -left-6 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm border border-green-200 text-gray-900 px-4 py-2 rounded-lg shadow-lg">
               <div className="text-center">
-                <div className="text-lg font-bold text-green-400">6 Months</div>
+                <div className="text-lg font-bold text-green-600">6 Months</div>
                 <div className="text-xs">Complete Program</div>
               </div>
             </div>
@@ -130,26 +129,13 @@ const WhyChooseUsSection = () => {
         <div className="text-center mt-16">
           <a
             href="/contact"
-            className="inline-flex items-center space-x-2 bg-green-500 hover:bg-green-400 text-black px-12 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-green-500/25 transform hover:scale-105"
+            className="inline-flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-12 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-green-600/25 transform hover:scale-105"
           >
             <span>Enroll Now</span>
           </a>
         </div>
       </div>
     </section>
-
-    {/* Section Separator */}
-    <div className="relative">
-      <div className="absolute inset-0 flex items-center">
-        <div className="w-full border-t border-green-500/20"></div>
-      </div>
-      <div className="relative flex justify-center">
-        <div className="bg-black px-6">
-          <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-        </div>
-      </div>
-    </div>
-    </>
   );
 };
 
