@@ -3,6 +3,7 @@ import { ArrowRight, Play } from "lucide-react";
 
 const HeroSection = () => {
   return (
+    <>
     <section className="relative min-h-screen flex items-center bg-black overflow-hidden py-24 lg:py-32">
       {/* Background Pattern */}
       <div className="absolute inset-0 -z-10">
@@ -158,6 +159,7 @@ const HeroSection = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
