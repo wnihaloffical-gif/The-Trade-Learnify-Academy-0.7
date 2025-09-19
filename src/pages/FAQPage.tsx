@@ -52,18 +52,18 @@ const FAQPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black pt-20">
+    <div className="min-h-screen bg-gray-50 pt-20">
       {/* Hero Section */}
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
               Frequently Asked{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-500">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-500">
                 Questions
               </span>
             </h1>
-            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Get answers to common questions about our trading education programs
             </p>
           </div>
@@ -71,48 +71,34 @@ const FAQPage = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-gray-900/30 relative">
-        {/* Section Separator */}
-        <div className="absolute top-0 left-0 right-0">
-          <div className="relative">
-            <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-green-500/20"></div>
-            </div>
-            <div className="relative flex justify-center">
-              <div className="bg-black px-6">
-                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
+      <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-6">
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="bg-gray-900/50 backdrop-blur-sm rounded-xl border border-green-500/20 hover:border-green-400/50 transition-all duration-300"
+                className="bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300"
               >
                 <button
                   onClick={() => toggleQuestion(index)}
                   className="w-full px-8 py-6 text-left flex items-center justify-between focus:outline-none group"
                 >
-                  <h3 className="text-lg font-semibold text-white group-hover:text-green-400 transition-colors duration-300">
+                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-green-600 transition-colors duration-300">
                     {faq.question}
                   </h3>
                   <div className="flex-shrink-0 ml-4">
                     {openQuestion === index ? (
-                      <ChevronUp className="text-green-400" size={24} />
+                      <ChevronUp className="text-green-600" size={24} />
                     ) : (
-                      <ChevronDown className="text-gray-400 group-hover:text-green-400 transition-colors duration-300" size={24} />
+                      <ChevronDown className="text-gray-500 group-hover:text-green-600 transition-colors duration-300" size={24} />
                     )}
                   </div>
                 </button>
 
                 {openQuestion === index && (
                   <div className="px-8 pb-6">
-                    <div className="border-t border-green-500/20 pt-6">
-                      <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                    <div className="border-t border-gray-200 pt-6">
+                      <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
                     </div>
                   </div>
                 )}
@@ -123,35 +109,21 @@ const FAQPage = () => {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-20 bg-black relative">
-        {/* Section Separator */}
-        <div className="absolute top-0 left-0 right-0">
-          <div className="relative">
-            <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-green-500/20"></div>
-            </div>
-            <div className="relative flex justify-center">
-              <div className="bg-gray-900/30 px-6">
-                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
+      <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">
             Still Have{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-500">
               Questions?
             </span>
           </h2>
-          <p className="text-xl text-gray-400 mb-8">
+          <p className="text-xl text-gray-600 mb-8">
             Our team is ready to provide personalized answers to all your queries
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
-              className="inline-flex items-center space-x-2 bg-green-500 hover:bg-green-400 text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-green-500/25 transform hover:scale-105"
+              className="inline-flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
             >
               <span>Contact Us</span>
             </a>
@@ -159,7 +131,7 @@ const FAQPage = () => {
               href="https://wa.me/919373228941"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+              className="inline-flex items-center space-x-2 border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
             >
               <span>WhatsApp Us</span>
             </a>

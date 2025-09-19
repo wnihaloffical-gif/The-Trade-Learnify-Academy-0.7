@@ -20,7 +20,7 @@ const WhatsAppWidget = () => {
         {/* Close button */}
         <button
           onClick={handleClose}
-          className="absolute -top-2 -right-2 w-6 h-6 bg-gray-800 hover:bg-gray-900 text-white rounded-full flex items-center justify-center text-xs transition-colors duration-200 z-10 shadow-lg"
+          className="absolute -top-2 -right-2 w-6 h-6 bg-gray-600 hover:bg-gray-700 text-white rounded-full flex items-center justify-center text-xs transition-colors duration-200 z-10 shadow-md"
         >
           <X size={12} />
         </button>
@@ -28,7 +28,7 @@ const WhatsAppWidget = () => {
         {/* WhatsApp Button */}
         <button
           onClick={handleWhatsAppClick}
-          className="bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center space-x-3 group hover:scale-105"
+          className="bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center space-x-3 group hover:scale-105"
         >
           <img 
             src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 

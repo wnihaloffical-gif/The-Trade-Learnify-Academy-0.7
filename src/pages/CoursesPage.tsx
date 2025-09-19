@@ -101,31 +101,31 @@ const CoursesPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black pt-20">
+    <div className="min-h-screen bg-gray-50 pt-20">
       {/* Hero Section */}
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
               Professional Trading{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-500">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-500">
                 Mastery Program
               </span>
             </h1>
-            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               6-Month Professional Trader Development Program (PTDP) - Your complete transformation journey from beginner to confident trader
             </p>
           </div>
 
           {/* Program Toggle */}
           <div className="flex justify-center mb-12">
-            <div className="bg-gray-900/50 backdrop-blur-sm rounded-lg p-2 border border-green-500/20">
+            <div className="bg-gray-100 rounded-lg p-2 border border-gray-200">
               <button
                 onClick={() => setSelectedProgram('offline')}
                 className={`px-8 py-3 rounded-lg font-semibold transition-all duration-300 ${
                   selectedProgram === 'offline'
-                    ? 'bg-green-500 text-black shadow-lg'
-                    : 'text-gray-300 hover:text-white'
+                    ? 'bg-green-600 text-white shadow-md'
+                    : 'text-gray-600 hover:text-gray-900'
                 }`}
               >
                 Offline Program
@@ -134,8 +134,8 @@ const CoursesPage = () => {
                 onClick={() => setSelectedProgram('online')}
                 className={`px-8 py-3 rounded-lg font-semibold transition-all duration-300 ${
                   selectedProgram === 'online'
-                    ? 'bg-green-500 text-black shadow-lg'
-                    : 'text-gray-300 hover:text-white'
+                    ? 'bg-green-600 text-white shadow-md'
+                    : 'text-gray-600 hover:text-gray-900'
                 }`}
               >
                 Online Program
@@ -146,36 +146,22 @@ const CoursesPage = () => {
       </section>
 
       {/* Program Details */}
-      <section className="py-20 bg-gray-900/30 relative">
-        {/* Section Separator */}
-        <div className="absolute top-0 left-0 right-0">
-          <div className="relative">
-            <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-green-500/20"></div>
-            </div>
-            <div className="relative flex justify-center">
-              <div className="bg-black px-6">
-                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="bg-gradient-to-r from-green-500/10 to-green-600/10 border border-green-500/20 rounded-xl p-8 mb-8">
-              <h2 className="text-3xl font-bold text-white mb-4">Program Snapshot – Your Journey to Trading Mastery</h2>
-              <p className="text-lg text-gray-300 leading-relaxed mb-6">
+            <div className="bg-gradient-to-r from-green-50 to-green-100 border border-green-200 rounded-xl p-8 mb-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Program Snapshot – Your Journey to Trading Mastery</h2>
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
                 At The Trade Learnify Academy, our 6-Month Professional Trader Development Program (PTDP) is not just a course—it's a complete transformation journey. We take you from beginner to confident trader, covering every major market: Equities, Futures & Options, Forex, Commodities, and Cryptocurrencies.
               </p>
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <p className="text-lg text-gray-700 leading-relaxed">
                 What makes us different is our one-on-one mentorship approach, ensuring personalized guidance, customized trading plans, and continuous support throughout your journey. This isn't about theory alone—it's about live market training, practical strategies, and hands-on mentorship that turn knowledge into real-world results.
               </p>
             </div>
           </div>
 
-          <div className="bg-gray-900/50 backdrop-blur-sm rounded-xl p-8 mb-16 border border-green-500/20">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">
+          <div className="bg-white rounded-xl p-8 mb-16 border border-gray-200 shadow-sm">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
               {selectedProgram === 'offline' ? 'Offline' : 'Online'} Program Overview
             </h2>
             
@@ -185,18 +171,18 @@ const CoursesPage = () => {
                 const IconComponent = programDetails[selectedProgram].icon;
                 return (
                   <div key={key} className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-br from-green-500/20 to-green-600/20 rounded-xl flex items-center justify-center mb-4 mx-auto">
-                      <IconComponent className="text-green-400" size={32} />
+                    <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                      <IconComponent className="text-green-600" size={32} />
                     </div>
-                    <h3 className="text-white font-semibold mb-2 capitalize">{key}</h3>
-                    <p className="text-gray-300">{value as string}</p>
+                    <h3 className="text-gray-900 font-semibold mb-2 capitalize">{key}</h3>
+                    <p className="text-gray-600">{value as string}</p>
                   </div>
                 );
               })}
             </div>
 
             <div className="text-center mt-8">
-              <p className="text-lg text-green-400 font-semibold italic">
+              <p className="text-lg text-green-600 font-semibold italic">
                 "This program doesn't just teach trading—it builds traders who can succeed in any market condition."
               </p>
             </div>
@@ -205,26 +191,12 @@ const CoursesPage = () => {
       </section>
 
       {/* Unique Features */}
-      <section className="py-20 bg-black relative">
-        {/* Section Separator */}
-        <div className="absolute top-0 left-0 right-0">
-          <div className="relative">
-            <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-green-500/20"></div>
-            </div>
-            <div className="relative flex justify-center">
-              <div className="bg-gray-900/30 px-6">
-                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               What Makes This Program{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-500">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-500">
                 Unique?
               </span>
             </h2>
@@ -236,13 +208,13 @@ const CoursesPage = () => {
               return (
                 <div
                   key={index}
-                  className="bg-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-green-500/20 hover:border-green-400/50 transition-all duration-300 hover:transform hover:-translate-y-2"
+                  className="bg-white rounded-xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 hover:transform hover:-translate-y-2"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500/20 to-green-600/20 rounded-xl flex items-center justify-center mb-6">
-                    <IconComponent className="text-green-400" size={32} />
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-xl flex items-center justify-center mb-6">
+                    <IconComponent className="text-green-600" size={32} />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{feature.description}</p>
                 </div>
               );
             })}
@@ -251,30 +223,16 @@ const CoursesPage = () => {
       </section>
 
       {/* Course Modules */}
-      <section className="py-20 bg-gray-900/30 relative">
-        {/* Section Separator */}
-        <div className="absolute top-0 left-0 right-0">
-          <div className="relative">
-            <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-green-500/20"></div>
-            </div>
-            <div className="relative flex justify-center">
-              <div className="bg-black px-6">
-                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               📚 Course{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-500">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-500">
                 Modules
               </span>
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               8 comprehensive modules covering every aspect of professional trading
             </p>
           </div>
@@ -283,15 +241,15 @@ const CoursesPage = () => {
             {modules.map((module, index) => (
               <div
                 key={index}
-                className="bg-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-green-500/20 hover:border-green-400/50 transition-all duration-300"
+                className="bg-white rounded-xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300"
               >
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center text-black font-bold text-sm">
+                  <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-green-600 to-green-700 rounded-full flex items-center justify-center text-white font-bold text-sm">
                     {index + 1}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-3">{module.title}</h3>
-                    <p className="text-gray-300 leading-relaxed">{module.description}</p>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{module.title}</h3>
+                    <p className="text-gray-600 leading-relaxed">{module.description}</p>
                   </div>
                 </div>
               </div>
@@ -299,13 +257,13 @@ const CoursesPage = () => {
           </div>
 
           <div className="text-center mt-16">
-            <div className="bg-gradient-to-r from-green-500/10 to-green-600/10 border border-green-500/20 rounded-xl p-8">
-              <p className="text-2xl font-bold text-white mb-4">
+            <div className="bg-gradient-to-r from-green-50 to-green-100 border border-green-200 rounded-xl p-8">
+              <p className="text-2xl font-bold text-gray-900 mb-4">
                 "From beginner to consistent trader—this is your complete path to financial freedom."
               </p>
               <a
                 href="/contact"
-                className="inline-flex items-center space-x-2 bg-green-500 hover:bg-green-400 text-black px-12 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-green-500/25 transform hover:scale-105"
+                className="inline-flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-12 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
               >
                 <span>Start Your Journey</span>
               </a>
@@ -315,26 +273,12 @@ const CoursesPage = () => {
       </section>
 
       {/* Key Features */}
-      <section className="py-20 bg-black relative">
-        {/* Section Separator */}
-        <div className="absolute top-0 left-0 right-0">
-          <div className="relative">
-            <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-green-500/20"></div>
-            </div>
-            <div className="relative flex justify-center">
-              <div className="bg-gray-900/30 px-6">
-                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Key{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-500">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-500">
                 Features
               </span>
             </h2>
@@ -344,10 +288,10 @@ const CoursesPage = () => {
             {keyFeatures.map((feature, index) => (
               <div
                 key={index}
-                className="bg-gray-900/50 backdrop-blur-sm rounded-lg p-6 border border-green-500/20 hover:border-green-400/50 transition-all duration-300 text-center"
+                className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 text-center"
               >
-                <CheckCircle className="text-green-400 mx-auto mb-4" size={24} />
-                <p className="text-white font-medium">{feature}</p>
+                <CheckCircle className="text-green-600 mx-auto mb-4" size={24} />
+                <p className="text-gray-900 font-medium">{feature}</p>
               </div>
             ))}
           </div>
@@ -355,7 +299,7 @@ const CoursesPage = () => {
           <div className="text-center mt-16">
             <a
               href="/contact"
-              className="inline-flex items-center space-x-2 bg-green-500 hover:bg-green-400 text-black px-12 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-green-500/25 transform hover:scale-105"
+              className="inline-flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-12 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105"
             >
               <span>Limited Seats Left - Apply Now</span>
             </a>
